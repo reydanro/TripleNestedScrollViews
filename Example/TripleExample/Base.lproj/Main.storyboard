@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4471.1" systemVersion="12E55" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="vXZ-lx-hvc">
+    <dependencies>
+        <deployment defaultVersion="1536" identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3697.3"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="20d-dX-kca"/>
+                        <viewControllerLayoutGuide type="bottom" id="UpR-hz-Wlp"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" directionalLockEnabled="YES" pagingEnabled="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7kn-LS-ZCF">
+                                <rect key="frame" x="20" y="20" width="280" height="489"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </scrollView>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="6UT-JL-tym">
+                                <rect key="frame" x="20" y="517" width="51" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="onFixSwitch:" destination="vXZ-lx-hvc" eventType="valueChanged" id="FI7-dx-rMN"/>
+                                </connections>
+                            </switch>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fix inner scroll" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Yo-tN-Iyp">
+                                <rect key="frame" x="77" y="522" width="120" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="6UT-JL-tym" firstAttribute="top" secondItem="7kn-LS-ZCF" secondAttribute="bottom" constant="8" symbolic="YES" id="9cx-LT-b4P"/>
+                            <constraint firstItem="6UT-JL-tym" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="20" id="AME-lU-fPq"/>
+                            <constraint firstAttribute="trailing" secondItem="7kn-LS-ZCF" secondAttribute="trailing" constant="20" symbolic="YES" id="PcK-UD-dzI"/>
+                            <constraint firstItem="7kn-LS-ZCF" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" constant="20" symbolic="YES" id="Tqj-rS-VJe"/>
+                            <constraint firstItem="7kn-LS-ZCF" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="20" symbolic="YES" id="aXU-Cs-Ioi"/>
+                            <constraint firstAttribute="bottom" secondItem="6UT-JL-tym" secondAttribute="bottom" constant="20" symbolic="YES" id="ehO-mm-KJ9"/>
+                            <constraint firstItem="6UT-JL-tym" firstAttribute="centerY" secondItem="3Yo-tN-Iyp" secondAttribute="centerY" id="pFK-6X-Rot"/>
+                            <constraint firstItem="3Yo-tN-Iyp" firstAttribute="leading" secondItem="6UT-JL-tym" secondAttribute="trailing" constant="8" id="zRL-Nb-pzN"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="mainScroll" destination="7kn-LS-ZCF" id="AhK-HQ-AZz"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>
